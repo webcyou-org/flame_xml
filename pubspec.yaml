@@ -1,6 +1,6 @@
 name: flame_xml
 description: xml parser using Flame game engine
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/webcyou-org/flame_xml
 
 environment:
@@ -13,7 +13,7 @@ dependencies:
   flame: ^1.6.0
   xml: ^6.2.2
   tiled: ^0.10.1
-  path: ^1.8.3
+  path: ^1.8.2
 
 dev_dependencies:
   flutter_test:
