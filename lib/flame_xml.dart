@@ -1,11 +1,11 @@
 library flame_xml;
 
-import 'package:flame/game.dart';
-import 'package:xml/xml.dart';
-import 'package:tiled/tiled.dart';
+import 'package:flame/flame.dart';
 import 'package:path/path.dart';
+import 'package:tiled/tiled.dart';
+import 'package:xml/xml.dart';
 
-class FlameXML extends FlameGame {
+class FlameXML {
   String _source = '';
   String _xml = '';
 
@@ -20,7 +20,7 @@ class FlameXML extends FlameGame {
   }
 
   Future<FlameXML> _init() async {
-    _xml = await assets.readFile(_source);
+    _xml = await Flame.assets.readFile(_source);
     return this;
   }
 
@@ -29,8 +29,5 @@ class FlameXML extends FlameGame {
     return XmlParser(node);
   }
 
-  Map<String, dynamic> get data => {
-    'source': _source,
-    'xml': _xml
-  };
+  Map<String, dynamic> get data => {'source': _source, 'xml': _xml};
 }
